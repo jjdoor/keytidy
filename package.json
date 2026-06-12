@@ -1,0 +1,41 @@
+{
+  "name": "keytidy",
+  "version": "0.1.0",
+  "description": "Tidy JSON key order — and sort package.json the conventional way (canonical field order, sorted dependencies, untouched scripts). Zero dependencies.",
+  "bin": {
+    "keytidy": "bin/cli.js"
+  },
+  "main": "src/core.js",
+  "scripts": {
+    "test": "node --test"
+  },
+  "keywords": [
+    "json",
+    "package.json",
+    "sort",
+    "format",
+    "formatter",
+    "tidy",
+    "keys",
+    "cli",
+    "pre-commit"
+  ],
+  "files": [
+    "bin",
+    "src",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jjdoor/keytidy.git"
+  },
+  "homepage": "https://github.com/jjdoor/keytidy#readme",
+  "bugs": {
+    "url": "https://github.com/jjdoor/keytidy/issues"
+  }
+}
