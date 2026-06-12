@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="420" viewBox="0 0 1000 420" font-family="Menlo, 'SF Mono', 'DejaVu Sans Mono', monospace">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0d1117"/>
+      <stop offset="1" stop-color="#161b22"/>
+    </linearGradient>
+    <filter id="glow" x="-20%" y="-60%" width="140%" height="220%">
+      <feGaussianBlur stdDeviation="2.6" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <rect width="1000" height="420" fill="url(#bg)"/>
+  <rect width="1000" height="420" fill="none" stroke="#30363d" stroke-width="2"/>
+  <g stroke="#21262d" stroke-width="1">
+    <line x1="250" y1="0" x2="250" y2="420"/>
+    <line x1="500" y1="0" x2="500" y2="420"/>
+    <line x1="750" y1="0" x2="750" y2="420"/>
+  </g>
+
+  <!-- terminal dots -->
+  <g>
+    <circle cx="936" cy="32" r="6" fill="#f85149"/>
+    <circle cx="958" cy="32" r="6" fill="#d29922"/>
+    <circle cx="980" cy="32" r="6" fill="#3fb950"/>
+  </g>
+
+  <!-- wordmark -->
+  <text x="60" y="108" font-size="58" font-weight="700" letter-spacing="-1" filter="url(#glow)">
+    <tspan fill="#58a6ff">key</tspan><tspan fill="#3fb950">tidy</tspan>
+  </text>
+  <text x="62" y="142" font-size="20" fill="#8b949e">tidy JSON key order — package.json the way it's meant to look</text>
+
+  <!-- before / after panel -->
+  <rect x="60" y="166" width="880" height="194" rx="10" fill="#0b0f14" stroke="#30363d" stroke-width="1.5"/>
+
+  <!-- column headers -->
+  <text x="104" y="198" font-size="14" fill="#6e7681">package.json — random order</text>
+  <text x="556" y="198" font-size="14" fill="#3fb950">after keytidy</text>
+
+  <!-- arrow -->
+  <text x="468" y="288" font-size="40" fill="#58a6ff" font-weight="700">→</text>
+
+  <!-- before keys (scrambled, muted) -->
+  <g font-size="19" fill="#6e7681">
+    <text x="104" y="236">"version"</text>
+    <text x="104" y="268">"dependencies"</text>
+    <text x="104" y="300">"name"</text>
+    <text x="104" y="332">"scripts"</text>
+  </g>
+
+  <!-- after keys (tidy, with check gutter) -->
+  <g font-size="19">
+    <text x="556" y="236" fill="#3fb950">✓</text><text x="582" y="236" fill="#c9d1d9">"name"</text>
+    <text x="556" y="268" fill="#3fb950">✓</text><text x="582" y="268" fill="#c9d1d9">"version"</text>
+    <text x="556" y="300" fill="#3fb950">✓</text><text x="582" y="300" fill="#c9d1d9">"scripts"</text><text x="690" y="300" fill="#6e7681" font-size="14">kept in order</text>
+    <text x="556" y="332" fill="#3fb950">✓</text><text x="582" y="332" fill="#c9d1d9">"dependencies"</text><text x="746" y="332" fill="#6e7681" font-size="14">sorted A→Z</text>
+  </g>
+
+  <!-- install hint -->
+  <text x="60" y="394" font-size="17" fill="#58a6ff">$ npx keytidy <tspan fill="#6e7681">·</tspan> pip install keytidy <tspan fill="#6e7681">·</tspan> keytidy --check</text>
+</svg>
